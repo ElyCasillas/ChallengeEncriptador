@@ -1,0 +1,297 @@
+body{
+    margin: auto;
+    padding: 15px; 
+    width: 950px;
+    height: 650px;
+    font-family: 'Inter', sans-serif;
+    background-image: url(imagenes/backgroundII.jpg);
+    background-size: cover;
+    background-position: center;
+    font-style: inherit;
+    line-height: 3;
+}
+main{
+    position: relative;
+    min-height: 100%;
+}
+.principal{
+    margin: auto;
+    padding: 3px;
+    background: none;
+}
+.header{
+    /*logo*/
+    margin: 90%;
+    float: left;
+}
+.logo{
+    margin-top: 1%;
+    margin-left: 5%;
+    float: inherit;
+}
+.izq{
+    float: left;
+    width: 70%;
+    height: 70%;
+}
+/*#der{
+    float: right;
+    width: 26%;
+    height: auto;
+    border-radius: 24px;
+    background: white;
+}*/
+.encriptado{
+   /* display: flex;
+    justify-content: center;*/
+    position: relative;
+    width: 30%;
+    height: 90%;
+    left: 80%;
+    top: 5%;
+    background: white;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+.mensaje-encriptado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    text-align: center;
+    background: none;
+}
+#aviso{
+    font-size: small;
+    color: white;
+    font-weight: bold;
+}
+.btn-limpiar,.izqbtn{
+    float: left;
+    margin-right: 25px;
+    margin-top: 40px;
+    height: 40px;
+    line-height: 40px;
+    width: 50%;   /*Haz que los contenedores de botones ocupen todo el ancho */
+}
+.text{
+    position: relative;
+    width: 42%;
+    height: 60%;
+    left: 12%;
+    top: 15%;
+    border: none;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 25px;
+    line-height: 75%;
+    outline: none;
+    resize: none;
+    background: none;
+    color: black;
+}
+.text::placeholder{
+    color: #0a3871;
+}
+.text:focus,.text:active {
+  border: none;
+  outline: none;
+}
+#muñeco{
+    width: 80%;
+    height: 40%;
+    top: 15%;
+    position: relative;
+}
+#titulo-mensaje{
+    margin-left: 7%;
+    margin-right: 5%;
+}
+#textmns{
+    float: left;
+    margin-left: 10%;
+    color: black;
+    width: 70%;
+    height: 60%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 15px;
+    background: none;
+}
+.btn-encriptar{
+    height: 60%;
+    border-radius: 24px;
+    margin-left: 15%;
+    background: rosybrown;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+   /* align-items: center;gap: 8px;*/
+    justify-content: center;
+    padding: 2%;
+    width: 25%;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+}
+.btn-encriptar:hover {
+    background-color: white;
+    color: darkblue;
+}
+.btn-desencriptar{
+    height: 60%;
+    border-radius: 24px;
+    margin-left: 15%;
+    background: whitesmoke;
+    color: darkblue;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /*align-items: center;gap: 8px;*/
+    justify-content: center;
+    padding: 2%;
+    width: 25%;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+}
+.btn-desencriptar:hover {
+  background-color: rosybrown;
+  color: white;
+}
+#clear{
+    height: 60%;
+    border-radius: 24px;
+    margin-left: 15%;
+    background: rosybrown;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  /*  align-items: center;  gap: 8px;*/
+    justify-content: center;
+    padding: 2%;
+    width: 25%;
+    font-family: "Inter";
+    font-size: 18px;
+   line-height: 19px;
+    text-align: center;
+}
+.btn-encriptar:hover {
+background-color: white;
+color: darkblue;
+}
+
+#copiar{
+    margin-left: 33%;
+    margin-top: 90%;
+    padding: 24px;
+    width: 40%;
+    height: 10%;
+    border-radius: 24px;
+    background: mediumaquamarine;
+    color: white;
+    display: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#copiar:hover {
+  background-color: whitesmoke;
+  color: mediumaquamarine;
+}
+/* Estilos para el pie de página */
+footer {
+    padding: 10px;
+    margin: 30px auto; 
+    text-align: center; 
+    width: auto; 
+    bottom: 0;
+    left: 0;
+    right: 0; 
+}
+.github-logo {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#name {
+    margin-top: 10px;
+    font-size: 14px;
+    display: inline-block;
+    color: white;
+    vertical-align: middle;
+}
+
+/*Diseño responsivo*/
+@media (max-width: 57.5em) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+    }
+    .encriptado,.mensaje-encriptado,.textmns{
+        width: 55%;
+        height: auto;
+        background: white;       
+        border-radius: 32px;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        left: 190px;
+        margin-top: 5px; /* Espacio entre el pie de página y el encriptador */
+        margin-bottom: 20px; /* Espacio entre el encriptador y los botones */
+    }
+    .texto{
+        width: 100%;
+        height: 50%;
+        top: 5%;
+        background: white;
+    }
+    #aviso{
+        width: 80%;
+        left: 10%;
+        top: 30%;
+        font-size: 12px;
+    }
+    #muñeco {
+        top: 0;
+        display: none;
+        visibility: hidden;
+    }
+    .btn{
+        width: 80%;
+        left: 50%;
+        top: 70%;
+    }
+    .btn-copiar, .btn-encriptar,.btn-desencriptar{
+        width: 48%;
+        border-radius: 16px;
+    }
+    .btn-copiar:hover,.btn-encriptar:hover,.btn-desencriptar:hover {
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+     }
+     .btn-limpiar, .izqbtn {
+        float: none; /* Elimina el flotado para que los botones no estén alineados a la derecha */
+         /*margin: auto; Centra los botones horizontalmente */
+        margin-top: 30px; /* Espacio entre el encriptador y los botones */
+    }
+    #der.encriptado{
+        background: none;
+    }
+     footer {
+        padding: 10px;
+        margin: 30px auto; 
+        text-align: center; 
+        width: auto; 
+        bottom: 0;
+        left: 0;
+        right: 0; 
+    }
+}

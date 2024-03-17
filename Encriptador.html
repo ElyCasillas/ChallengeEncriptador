@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENCRIPTADOR DE TEXTO - ALURA</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles-Encriptador.css">
+    <link rel="shortcut icon" href="imagenes/Logo.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <header class="principal">
+        <h1><img class="logo" src="imagenes/Logo.png"></h1>
+    </header>
+    <main>
+        <div class="izq">
+            <div class="texto">
+                <textarea name="text" class="text" id="textinput" cols="30" rows="15" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+        </div>
+        <div id="der" class="encriptado">
+            <img src="imagenes/girlIcon.gif" id="muñeco">
+            <div class="mensaje-encriptado" id="mensaje-encriptado">
+                <h2 id="titulo-mensaje">Ningún mensaje encontrado</h2>
+                <textarea id="textmns" name="encrip-area" rows="10" cols="30">Ingresa el texto que deseas encriptar o desencriptar.</textarea>
+            </div>
+            <div class="btn-copiar">
+                <button id="copiar" type="button">¡Copiar!</button>
+                <script>
+                    // Función para copiar el texto encriptado al portapapeles
+                    document.getElementById("copiar").addEventListener("click", function() {
+                        var textoEncriptado = document.getElementById("textmns");
+                        textoEncriptado.select();
+                        document.execCommand("copy");
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="btn-limpiar">
+            <button id="clear" type="button" disabled>¡Clear!</button>
+        </div>
+        <div class="izqbtn">
+            <p id="aviso">ℹ Solo letras minúsculas, y sin acento</p> 
+            <div class="btn">
+                <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>
+                <button class="btn-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </div>
+        
+    </main>
+    <script src="script.js"></script>
+    <footer>
+        <a href="https://github.com/ElyCasillas/Encriptador.git">
+          <img class="github-logo" src="imagenes/github-logo.png">
+        </a>
+        <p id=name>ELIZABETH CASILLAS GARCIA  2024</p>
+    </footer>
+</body>
+</html>
